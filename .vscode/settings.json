@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "__bit_reference": "cpp",
+        "__mutex_base": "cpp",
+        "any": "cpp",
+        "array": "cpp",
+        "optional": "cpp",
+        "string": "cpp",
+        "tuple": "cpp",
+        "variant": "cpp"
+    }
+}
