@@ -1,3 +1,5 @@
+//FULL CHARACTER ARRAY
+
 //code for 256 characters 
 
 #include<bits/stdc++.h>

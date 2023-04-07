@@ -1,3 +1,6 @@
+//CHARACTER HASHING
+
+
 //is character hashing possible? YES!!!!
 //eg. "abcdafc", how many times has a appeared? how many times has c appeared?
 
