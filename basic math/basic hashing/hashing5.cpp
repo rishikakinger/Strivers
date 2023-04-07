@@ -11,6 +11,10 @@ int main(){
     int n;
     cin>>n;
     int arr[n];
+    //NOTE: you can precompute while taking input also, that will save you 1 for loop
+    //not saving you much as it is N+N and not N*N
+
+
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
