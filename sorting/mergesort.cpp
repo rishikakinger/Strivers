@@ -36,13 +36,7 @@ void merge(vector<int> &arr,int low,int mid, int high){
     }
 
 
-
-
 }
-
-
-
-
 
 
 void ms(vector<int> &arr,int low, int high){
