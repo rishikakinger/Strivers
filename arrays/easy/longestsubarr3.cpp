@@ -26,3 +26,4 @@ int longestSubarrayWithSumK(vector<int> a, long long k){
     return maxlen;
 }
 //TIME COMPLEXITY IS NOT O(N^2), IT IS O(2N)
+//use window approach for all consecutive problem qs 
