@@ -35,7 +35,7 @@ int majorityelement(vector<int> v){
     for(int i=0;i<v.size();i++){
         if(v[i]==el)cnt1++;
     }
-    if(cnt1>=v.size()/2)return el;
+    if(cnt1>v.size()/2)return el;
     return -1;
 }
 
