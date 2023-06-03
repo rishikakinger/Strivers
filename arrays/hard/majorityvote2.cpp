@@ -50,8 +50,6 @@ vector<int> majorityElement(vector<int> v){
 
     return ls;
 
-
-
 }
 
 //time complexity is O(2*n)
