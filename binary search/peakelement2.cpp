@@ -8,7 +8,7 @@ int peakElement(int arr[], int n) {
     while(l<=h){
         mid=(l+h)/2;
         //if mid=0 or n-1, simply return mid-- v imp point
-        if((mid==0||arr[mid-1]<=arr[mid])&& (mid==n-1||arr[mid+1]<=arr[mid])){
+        if((mid==0||arr[mid-1]<=arr[mid])&& (mid==n-1||arr[mid+1]<=arr[mid])){//imp line to understand
             return mid;
         }
         else if(mid>0&&arr[mid-1]>arr[mid]){
@@ -21,3 +21,5 @@ int peakElement(int arr[], int n) {
     return mid;
 
 }
+
+//also note, binary search method works here only bc we have to return any ONE peak element
