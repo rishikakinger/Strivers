@@ -7,7 +7,7 @@
 using namespace std;
 
 
-int lowerBound(vector<int> arr,int n,int x){
+int upperBound(vector<int> arr,int n,int x){
     int low=0, high=n-1;
     int ans=n;//default ans
     while(low<=high){
