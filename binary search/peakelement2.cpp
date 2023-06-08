@@ -1,3 +1,7 @@
+//bs is alwys used when we want to eliminate one half
+
+
+
 #include<iostream>
 
 using namespace std;
