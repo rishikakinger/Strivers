@@ -1,10 +1,6 @@
 //did not understand jack shit, skipping this question 
 
 
-
-
-
-
 // n*m will always be odd
 
 //brute force soltuion: iterate over entire matrix, store elements in a data structure like arr, sort it, find middle element 
