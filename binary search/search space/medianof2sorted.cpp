@@ -37,8 +37,8 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2){
         int right2= cut2==n2? INT_MAX:nums2[cut2];
 
         if(left1<=right2 && left2<=right1){
-            if(n1+n2%2==0){
-                return (max(left1,left2),min(right1,right2))/2.0;
+            if((n1+n2)%2==0){
+                return (max(left1,left2)+min(right1,right2))/2.0;
 
             }
             else{
@@ -54,8 +54,11 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2){
             low=cut1+1;
 
         }
-        return 0.0;
+        
 
     }
+    return 0.0;
 
 }
+
+//time complexity is log(min(n1,n2))
