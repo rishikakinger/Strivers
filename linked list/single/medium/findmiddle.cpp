@@ -42,6 +42,6 @@ int getMiddle(Node *head){
         fast=fast->next->next;
 
     }
-    return slow;
+    return slow->data;
 
 }
