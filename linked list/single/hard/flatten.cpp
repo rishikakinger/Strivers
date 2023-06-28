@@ -47,7 +47,6 @@ Node* flattenNode(Node* root){
 
     root->next=flattenNode(root->next);
 
-    root= mergeLists(root,root->next);
-    return root;
-
+    return mergeLists(root,root->next);
+    
 }
