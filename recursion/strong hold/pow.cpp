@@ -25,22 +25,18 @@ double myPow(double x, int n){
 
 }
 
-//dont know if this is right or wrong
 
-double myPowRec(double x, int n){
-    if(n==0)return 1;
 
-    if(n<0){
-        if(-1*n % 2){
-            return 1/(x*myPowRec(x,n-1));
-        }
-        else{
-            return myPowRec(x*x,n/2);
-        }
+long long myPowRec(double n, int r){
+    if(r==0)return 1;
+    long long ans=1;
+    long long know=myPowRec(n,r/2)%1000000007;
+    if(r%2){
+         ans=ans*n;
+         ans=ans%1000000007;
     }
-    else{
-        if(n%2) return x*myPowRec(x,n-1);
-        else return myPowRec(x*x,n/2);
-    }
+    return (ans*(know*know)%1000000007)%1000000007;
+
+    
 
 }
