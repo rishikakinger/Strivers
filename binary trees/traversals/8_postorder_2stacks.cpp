@@ -38,3 +38,4 @@ vector<int> postorder(Node* root){
     return ans;
 
 }
+//to do in a single stack, just use reverse fnc
