@@ -52,7 +52,7 @@ int diameterOfBinaryTree(Node* root) {
 //M2
 //tc is O(n)
 
-int findMax(Node* root,int maxi){
+int findMax(Node* root,int& maxi){//IMP:PASS BY REFERENCE
     if(root==NULL)return 0;
 
     int lh=findMax(root->left,maxi);
