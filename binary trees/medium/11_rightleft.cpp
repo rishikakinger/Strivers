@@ -30,10 +30,6 @@ void recursion(Node* root,int level,vector<int>& res){
 }
 
 
-
-
-
-
 vector<int> rightSideView(Node* root){
     vector<int> res;
     recursion(root,0,res);
