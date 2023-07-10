@@ -35,3 +35,6 @@ bool getPath(Node* root,vector<int>& arr,int x){
     return false;
 
 }
+
+//tc is O(n)
+//sc is O(height)
