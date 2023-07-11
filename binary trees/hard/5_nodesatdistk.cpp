@@ -95,3 +95,6 @@ vector<int> distanceK(Node* root,Node* target, int k){
 
 
 }
+
+//tc is O(2N) - nlogn maybe for hashmap
+//sc is O(3N)
