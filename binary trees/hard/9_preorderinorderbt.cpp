@@ -33,7 +33,7 @@ Node* buildTree(vector<int>&preorder,int preStart,int preEnd,vector<int>&inorder
 
     Node* root=new Node(preorder[preStart]);
 
-    int inRoot=inMap[root->data];
+    int inRoot=inMap[root->data];//instead of iterating the entire inorder array, j find index from map
     int numsLeft=inRoot-inStart;
 
     root->left=buildTree(preorder,preStart+1,preStart+numsLeft,inorder,inStart,inRoot-1,inMap);
@@ -42,3 +42,6 @@ Node* buildTree(vector<int>&preorder,int preStart,int preEnd,vector<int>&inorder
     return root;
 
 }
+
+//tc is O(n) -logn for hash map
+//sc is O(2n)
