@@ -8,3 +8,5 @@ void swapNumber(int &a, int &b) {
 	b=a^b;
 	a=a^b;
 }
+
+//how to swap 2 no.s wihtout using a third variable

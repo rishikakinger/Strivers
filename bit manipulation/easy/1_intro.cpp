@@ -7,3 +7,17 @@
 //a=a^b
 //b=a^b
 //a=a^b
+
+
+//given N, print xor of all no.s from 1-N(without 0^(n) complexity)
+//for all multiples of 4, ans will always be n
+//soln is purely based on observation
+/*
+
+if(n%4==0) print(n)
+if(n%4==1) print(1)
+if(n%4==2) print(n+1)
+if(n%4==3) print(0)
+
+
+*/
