@@ -28,6 +28,7 @@ bool solve(vector<vector<char>>& board){
                     }
 
                 }
+                return false;
             }
         }
     }
