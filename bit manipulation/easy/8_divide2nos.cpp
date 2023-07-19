@@ -12,6 +12,8 @@ int divide(int divident, int divisor){
 
     divident=abs(divident);
     divisor= abs(divisor);
+    int res=0;
+    
 
     while(divident-divisor>=0){
         int count=0;
@@ -19,8 +21,13 @@ int divide(int divident, int divisor){
         while(divident-(divisor<<1<<count)>=0){
             count++;
         }
+        res+=(1<<count);
+        divident-=divisor<<count;
+
 
     }
+    if(sign) return res;
+    return -1*res;
 
 
 }
