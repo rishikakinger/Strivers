@@ -73,3 +73,5 @@ Node* findLastRight(Node* root){
     return findLastRight(root->right);
 
 }
+
+//tc is O(height of tree)
