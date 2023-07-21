@@ -1,6 +1,6 @@
 //kth smallest element in a binary search tree
 
-//not sure if the code is correct
+
 
 #include<bits/stdc++.h>
 #include<iostream>
@@ -45,45 +45,43 @@ struct Node
 
 
 
-Node* getInorder(Node* root,int k){
+int getInorder(Node* root,int k){
    
-    int counter=0;
-    Node* curr=root;
-    while(curr!=NULL){
-
-        if(counter==k-1){
-            return curr;
-        }
-
-        if(curr->left==NULL){
-           
-            curr=curr->right;
-        }
-        else{
-            //go to rightmost guy in left subtree
-
-            Node* prev=curr->left;
-            while(prev->right&& prev->right!=curr){
-                prev=prev->right;
-            }
-
-            if(prev->right==NULL){
-                prev->right=curr;
-                curr=curr->left;
+        int count = 0;
+        int ans;
+        Node* curr = root;
+        
+        while(curr){
+            if(curr->left == NULL){
+                count++;
+                if(count == k){
+                    ans = curr->data;
+                }
+                
+                curr = curr->right;
             }
             else{
-                prev->right=NULL;
+                Node* prev = curr->left;
                 
-                curr=curr->right;
-
+                while(prev->right && prev->right != curr){
+                    prev = prev->right;
+                }
+                
+                if(prev->right == NULL){
+                    prev->right = curr;
+                    curr = curr->left;
+                }
+                else{
+                    count++;
+                    prev->right = NULL;
+                    if(count == k){
+                        ans = curr->data;
+                    }
+                    curr = curr->right;
+                }
             }
-
-
         }
-        counter++;
-
+        
+        return ans;
     }
-    return curr;
 
-
-}
