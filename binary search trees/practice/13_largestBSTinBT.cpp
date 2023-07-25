@@ -29,3 +29,54 @@ struct Node
 
 //tc O(n)
 //sc O(1)
+
+
+class NodeValue{
+    public:
+    int minNode, maxNode, maxSize;
+
+    //constructor
+    NodeValue(int minNode,int maxNode, int maxSize){
+        this->maxNode=maxNode;
+        this->minNode=minNode;
+        this->maxSize=maxSize;
+
+    }
+};
+
+class Solution{
+    private:
+
+    NodeValue largestBSTSubtreeHelper(Node* root){
+        if(!root){
+            return NodeValue(INT_MAX,INT_MIN, 0);
+        }
+
+        //first get values from left and right
+
+        auto left=largestBSTSubtreeHelper(root->left);
+        auto right=largestBSTSubtreeHelper(root->right);
+
+        if(left.maxNode<root->data && root->data<right.minNode){
+            //it is a BST
+            return NodeValue(min(root->data,left.minNode),max(root->data,right.maxNode),left.maxSize+right.maxSize+1);
+
+        }
+        return NodeValue(INT_MIN,INT_MAX,max(left.maxSize,right.maxSize));
+        
+
+
+
+
+    }
+
+
+    public:
+    int largestBSTSubtree(Node* root){
+        return largestBSTSubtreeHelper(root).maxSize;
+
+    }
+
+
+
+};
