@@ -32,7 +32,7 @@ bool hasNext(){
     return !myStack.empty();
 }
 
-int next(){
+int next(){//always returns elements of inorder 
     Node* tempNode=myStack.top();
     myStack.pop();
     pushAll(tempNode->right);
