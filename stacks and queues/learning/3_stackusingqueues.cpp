@@ -87,7 +87,7 @@ int top(){
         Q1.top();
     }
 
-    
+    //tc O(n) sc O(n)
     
 };
 
