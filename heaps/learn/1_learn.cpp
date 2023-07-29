@@ -14,3 +14,5 @@
 
 
 //parent of any node is at i/2th index 
+
+//leaf nodes exist from (n/2)+1 to nth index
