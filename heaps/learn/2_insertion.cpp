@@ -3,6 +3,7 @@
 #include<vector>
 using namespace std;
 
+//NOTE: heaps start from index 1
 
 //assume maxheap
 
