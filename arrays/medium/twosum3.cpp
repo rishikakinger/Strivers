@@ -1,5 +1,7 @@
 //gfg question
-//when there are 2 diff arrays 
+//when there are 2 diff arrays
+
+//https://practice.geeksforgeeks.org/problems/find-all-pairs-whose-sum-is-x5808/1
 
 #include<bits/stdc++.h>
 #include<iostream>
