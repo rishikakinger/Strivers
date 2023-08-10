@@ -25,7 +25,8 @@ void sortArray(vector<int>& arr, int n){
         }
         else{
             swap(arr[high], arr[mid]);
-            high--;
+            high--;//arr[high] could have been 0
+            //imp:only in this case you dont increment mid
         }
 
 
