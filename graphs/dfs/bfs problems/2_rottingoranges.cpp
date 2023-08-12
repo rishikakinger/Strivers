@@ -36,7 +36,7 @@ int orangesRotting(vector<vector<int>>& grid){
 
                 int nrow=r+drow[i];
                 int ncol=c+dcol[i];
-                if(nrow>0 && nrow<n && ncol>0 && ncol<m && vis[nrow][ncol]!=2 && grid[nrow][ncol]==1){
+                if(nrow>=0 && nrow<n && ncol>=0 && ncol<m && vis[nrow][ncol]!=2 && grid[nrow][ncol]==1){
                     q.push({nrow,ncol},t+1);
                     vis[nrow][ncol]=2;
                 }
