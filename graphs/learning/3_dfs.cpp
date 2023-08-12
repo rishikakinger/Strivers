@@ -5,7 +5,7 @@ using namespace std;
 
 void dfs(int node, vector<int>adj[],int vis,vector<int>& ls){
     vis[node]=1;
-    ls.puhs_back(node);
+    ls.push_back(node);
 
     for(auto it:adj[node]){
         if(!vis(it)){
