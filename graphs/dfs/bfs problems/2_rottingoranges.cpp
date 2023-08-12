@@ -11,8 +11,8 @@ int orangesRotting(vector<vector<int>>& grid){
     int n=grid.size();
     int m=grid[0].size();
 
-    queue<pair<int,int>,int> q;
-    vector<vector<int>> vis;
+    queue<pair<pair<int,int>,int>> q;
+    int vis[n][m];
 
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
@@ -38,7 +38,7 @@ int orangesRotting(vector<vector<int>>& grid){
                 int ncol=c+dcol[i];
                 if(nrow>0 && nrow<n && ncol>0 && ncol<m && vis[nrow][ncol]!=2 && grid[nrow][ncol]==1){
                     q.push({nrow,ncol},t+1);
-                    vis[nrow][ncol]=1;
+                    vis[nrow][ncol]=2;
                 }
 
             }
