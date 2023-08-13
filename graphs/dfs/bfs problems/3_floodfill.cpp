@@ -22,8 +22,6 @@ void dfs(int row, int col, vector<vector<int>>& ans,vector<vector<int>>& image,i
         }
     }
 
-
-
 }
 
 
