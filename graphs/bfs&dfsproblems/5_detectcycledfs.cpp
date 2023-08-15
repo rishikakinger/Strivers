@@ -37,3 +37,7 @@ bool isCycle(int V,vector<adj> adj[]){
 
 
 }
+
+//sc o(n) for recursion + o(n) for vis array(not taking into acc adj list)
+
+//tc o(n+2e)+o(n) for loop 
