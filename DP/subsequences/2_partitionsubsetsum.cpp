@@ -3,8 +3,12 @@
 #include<vector>
 using namespace std;
 
-//subsequence-can be non contiguous 
-//BUT NEEDS TO FOLLOW ORDER 
+//if sum of subset 1 is s1 and sum of subset 2 is s2
+//s1=s2=s/2
+//so if s is odd->not possible
+//so if you can find subset of elements with sum s1 then job is done 
+
+//same as prev 
 
 
 int f(int ind, int target,vector<int> a,vector<vector<int>>& dp){
@@ -22,11 +26,11 @@ int f(int ind, int target,vector<int> a,vector<vector<int>>& dp){
 
 }
 
-//recursion 
-//tc is 2^n
-//sc is n 
+bool canPartition(vector<int>& arr,int n){
+    int sum=0;
+    for(int i=0;i<n;i++)sum+=arr[i];
+    if(sum%2!=0)return false;
+    vector<vector<int>> dp(n,vector<int>(n,-1));
+    return f(n,sum/2,arr,dp);
 
-//dp 
-//tc nxtarget
-//sc is nx target+ n 
-
+}
