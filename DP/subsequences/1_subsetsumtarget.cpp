@@ -17,7 +17,7 @@ int f(int ind, int target,vector<int> a,vector<vector<int>>& dp){
     if(target>=a[ind]){
         take=f(ind-1,target-a[ind],a,dp);
     }
-    return dp[ind][target]=take||nottake;//we are ok wiht any 1 path
+    return dp[ind][target]=take|nottake;//we are ok wiht any 1 path
 
 
 }

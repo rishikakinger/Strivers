@@ -21,7 +21,7 @@ int f(int ind, int target,vector<int> a,vector<vector<int>>& dp){
     if(target>=a[ind]){
         take=f(ind-1,target-a[ind],a,dp);
     }
-    return dp[ind][target]=take||nottake;//we are ok wiht any 1 path
+    return dp[ind][target]=take|nottake;//we are ok wiht any 1 path
 
 
 }
@@ -30,7 +30,7 @@ bool canPartition(vector<int>& arr,int n){
     int sum=0;
     for(int i=0;i<n;i++)sum+=arr[i];
     if(sum%2!=0)return false;
-    vector<vector<int>> dp(n,vector<int>(n,-1));
+    vector<vector<int>> dp(n,vector<int>(sum/2+1,-1));
     return f(n,sum/2,arr,dp);
 
 }
