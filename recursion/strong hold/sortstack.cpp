@@ -2,6 +2,7 @@
 #include<bits/stdc++.h>
 #include<iostream>
 #include<vector>
+#include<stack>
 using namespace std;
 
 void sorted(stack<int> &s,int n){

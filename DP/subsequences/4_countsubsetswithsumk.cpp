@@ -25,3 +25,24 @@ int f(int ind, int sum, vector<int> arr,vector<vector<int>> &dp){
 //dp[n][sum+1]
 //tc o(nxsum)
 //sc is o(nxsum)+n
+
+//accoridng to question, array does not have any zeroes
+
+//if zeroes are also present, final ans=pow(2,n)xoriginal ans returned by fnc, where n= no of zeroes 
+
+//use following code if zeroes are also present 
+
+
+int f1(int ind, int sum, vector<int> arr,vector<vector<int>> &dp){
+    
+    if(ind==0){
+        
+    }
+    if(dp[ind][sum]!=-1)return dp[ind][sum];
+
+    int notpick=f(ind-1,sum,arr,dp);
+    int pick=0;
+    if(arr[ind]<=sum)pick=f(ind-1,sum-arr[ind],arr,dp);
+    return dp[ind][sum]=pick+notpick;
+    
+}
