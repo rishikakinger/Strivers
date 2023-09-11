@@ -85,3 +85,25 @@ int getInorder(Node* root,int k){
         return ans;
     }
 
+
+class Solution {
+public:
+    void solve(Node* root, int &cnt, int &ans, int k){
+        if(root == NULL)    return;
+        //left, root, right 
+        solve(root->left, cnt, ans, k);
+        cnt++;
+        if(cnt == k){
+            ans = root->data;
+            return;
+        }
+        solve(root->right, cnt, ans, k);
+    }
+    int kthSmallest(Node* root, int k) {
+        
+        int cnt = 0;        
+        int ans;
+        solve(root, cnt, ans, k);
+        return ans;
+    }
+};
