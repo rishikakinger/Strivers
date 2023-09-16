@@ -10,6 +10,7 @@ Merge all the linked-lists into one sorted linked-list and return it.
 #include<bits/stdc++.h>
 #include<iostream>
 #include<vector>
+#include<queue>
 using namespace std;
 
 //tc is (nlogk)

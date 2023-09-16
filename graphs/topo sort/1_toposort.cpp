@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
 #include<iostream>
+#include<vector>
+#include<stack>
 using namespace std;
 
 //topo sort(bfs works on any DAG- directed acyclic graph)
